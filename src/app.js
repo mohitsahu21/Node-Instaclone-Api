@@ -2,9 +2,11 @@ const express = require('express')
 const app = express()
 const bodyParser = require("body-parser");
 const marioModel = require('./models/marioChar');
+const cors = require('cors')
 
 // Middlewares
 app.use(express.urlencoded());
+app.use(cors());
 
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json());
